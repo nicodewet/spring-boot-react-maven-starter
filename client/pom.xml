@@ -34,11 +34,12 @@
         <version>1.6</version>
         <executions>
           <execution>
-            <id>install yarn</id>
+            <id>install node and yarn</id>
             <goals>
-              <goal>install-yarn</goal>
+              <goal>install-node-and-yarn</goal>
             </goals>
             <configuration>
+              <nodeVersion>v8.9.0</nodeVersion>
               <yarnVersion>v1.13.0</yarnVersion>
             </configuration>
           </execution>
