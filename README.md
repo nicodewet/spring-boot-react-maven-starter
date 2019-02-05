@@ -44,11 +44,18 @@ In short multi-module Maven, Spring Boot magic and in particular these two plugi
 
 ### Client Developer Hat On Mode
 
-TODO.
+For an extremely quick start navigate to the client directory and execute the following:
+
+```shell
+$ yarn && yarn start
+```
+
+Having satisfied yourself that the client application runs, the next port of call would be getting 
+familiar with the README.md in the client directory.
 
 ### Server Developer Hat On Mode
 
-TODO.
+Open the server directory in an IDE of your choice. This is a stock standard Spring Boot application.
 
 ## Help
 
