@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# com.github.eirslett:frontend-maven-plugin
+/node 

@@ -53,9 +53,25 @@ $ yarn && yarn start
 Having satisfied yourself that the client application runs, the next port of call would be getting 
 familiar with the README.md in the client directory.
 
+#### Create React App
+
+The client app was generated using [Create React App](https://github.com/facebook/create-react-app) as follows.
+
+```shell
+$ npm install -g create-react-app@2.1.3
+$ npx create-react-app client
+```
+
 ### Server Developer Hat On Mode
 
 Open the server directory in an IDE of your choice. This is a stock standard Spring Boot application.
+
+In short the server-side exposes a good-beers endpoint that you can exercise as shown below, or you can just open 
+localhost:8080/good-beers in your browser.
+
+```shell
+$ curl localhost:8080/good-beers
+```
 
 ## Help
 
