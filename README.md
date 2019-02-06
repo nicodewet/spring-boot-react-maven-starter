@@ -53,7 +53,8 @@ $ yarn && yarn start
 Having satisfied yourself that the client application runs, the next port of call would be getting 
 familiar with the README.md in the client directory.
 
-Note that rather than using TypeScript as was done in the good-beers tutorial we have used Javascript.
+Note that rather than using TypeScript as was done in the good-beers tutorial we have used Javascript and 
+adhere to the [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/blob/master/react/README.md).
 
 #### Create React App
 
