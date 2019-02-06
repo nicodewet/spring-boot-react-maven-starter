@@ -19,7 +19,7 @@ Note a key intention here was *not* to use Thymeleaf to serve the front-end as h
 
 Source works:
 
-* [Bootiful Development with Spring Boot and React](https://developer.okta.com/blog/2017/12/06/bootiful-development-with-spring-boot-and-react) & [Spring Boot API with React UI](https://github.com/oktadeveloper/spring-boot-react-example)
+* *The good-beers tutorial*. [Bootiful Development with Spring Boot and React](https://developer.okta.com/blog/2017/12/06/bootiful-development-with-spring-boot-and-react) & [Spring Boot API with React UI](https://github.com/oktadeveloper/spring-boot-react-example)
 * [spring-boot-react-maven-starter](https://github.com/shekhargulati/spring-boot-react-maven-starter)
 
 ## Getting Started
@@ -52,6 +52,8 @@ $ yarn && yarn start
 
 Having satisfied yourself that the client application runs, the next port of call would be getting 
 familiar with the README.md in the client directory.
+
+Note that rather than using TypeScript as was done in the good-beers tutorial we have used Javascript.
 
 #### Create React App
 
