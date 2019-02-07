@@ -1,4 +1,4 @@
-package com.okta.developer.demo.beer;
+package com.thorgil.beer;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
