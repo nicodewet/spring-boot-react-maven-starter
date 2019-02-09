@@ -12,13 +12,12 @@ class EmployeeList extends Component {
 
     fetch('http://localhost:8080/api/employees')
       .then(response => response.json())
-      .then(data => {
-        console.log(data);
+      .then(data =>
         this.setState({
           employees: data._embedded.employees,
           isLoading: false
-        });
-      });
+        })
+      );
   }
 
   render() {
