@@ -22,15 +22,19 @@ class EmployeeList extends Component {
         throw new Error(genericNetworkResponseNotOkMessage);
       })
       .then(function(halRootDocumentData) {
-        if (halRootDocumentData._links !== undefined) {
-          let url = halRootDocumentData._links['employees'].href;
-          console.log(url);
-          let res = url.split('{?page,size,sort}');
+        if (
+          halRootDocumentData._links !== undefined &&
+          halRootDocumentData._links['employees'] !== undefined
+        ) {
+          let employeesContainedLinkHref =
+            halRootDocumentData._links['employees'].href;
+          console.log(employeesContainedLinkHref);
+          let res = employeesContainedLinkHref.split('{?page,size,sort}');
           // this only works if the page size is less than the total number of employees
           return fetch(res[0], fetchHeaders);
         } else {
           throw new Error(
-            'HAL API root object may not be a Resource Object as it has no _links.'
+            'HAL API root object may not be a Resource Object as it has no _links or contained employee resource links.'
           );
         }
       })
