@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Employee from './Employee';
 
 const root = '/api';
+const fetchHeaders = { headers: { 'Content-Type': 'application/hal+json' } };
+const genericNetworkResponseNotOkMessage = 'Network response was not ok.';
 
 class EmployeeList extends Component {
   constructor(props) {
@@ -12,16 +14,12 @@ class EmployeeList extends Component {
   componentDidMount() {
     this.setState({ isLoading: true });
 
-    fetch(root, { headers: { 'Content-Type': 'application/hal+json' } })
+    fetch(root, fetchHeaders)
       .then(function(response) {
-        if (response.status !== 200) {
-          console.log(
-            'Looks like there was a problem. Status Code: ' + response.status
-          );
-          return null;
+        if (response.ok) {
+          return response.json();
         }
-
-        return response.json();
+        throw new Error(genericNetworkResponseNotOkMessage);
       })
       .then(function(data) {
         if (data._links !== undefined) {
@@ -29,13 +27,17 @@ class EmployeeList extends Component {
           console.log(url);
           let res = url.split('{?page,size,sort}');
           // this only works if the page size is less than the total number of employees
-          return fetch(res[0]);
+          return fetch(res[0], fetchHeaders);
         } else {
-          // this makes no sense
-          return fetch(root);
+          throw new Error('Network response has no _links.');
         }
       })
-      .then(response => response.json())
+      .then(function(response) {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error(genericNetworkResponseNotOkMessage);
+      })
       .then(data => {
         console.log(data);
         this.setState({
