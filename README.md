@@ -65,6 +65,21 @@ $ npm install -g create-react-app@2.1.3
 $ npx create-react-app client
 ```
 
+#### Hypertext Application Language (HAL)
+
+References:
+* [React.js and Spring Data REST](https://spring.io/guides/tutorials/react-and-spring-data-rest/)
+
+#### Javascript fetch JSON with ES7 Async Await
+
+References:
+* https://gist.github.com/msmfsd/fca50ab095b795eb39739e8c4357a808
+
+#### JS Other 
+
+* https://javascript.info/async-await
+* https://javascript.info/custom-errors
+
 ### Server Developer Hat On Mode
 
 Open the server directory in an IDE of your choice. This is a stock standard Spring Boot application.
