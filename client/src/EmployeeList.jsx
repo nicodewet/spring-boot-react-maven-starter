@@ -8,16 +8,19 @@ class EmployeeList extends Component {
     this.state = { isLoading: false, employees: [] };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.setState({ isLoading: true });
 
-    // TODO should handle the errors that might be thrown here
-    FetchService.getEmployeesFromHalApi().then(fetchedEmployees => {
+    try {
+      const fetchedEmployees = await FetchService.getEmployeesFromHalApi();
       this.setState({
         employees: fetchedEmployees,
         isLoading: false
       });
-    });
+    } catch (error) {
+      // not good enough to just log errors
+      console.log(error);
+    }
   }
 
   render() {
