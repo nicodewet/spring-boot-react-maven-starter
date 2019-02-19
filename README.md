@@ -75,10 +75,32 @@ References:
 References:
 * https://gist.github.com/msmfsd/fca50ab095b795eb39739e8c4357a808
 
-#### JS Other 
+#### JS Other
 
 * https://javascript.info/async-await
 * https://javascript.info/custom-errors
+
+#### Testing React Components
+
+As you may expect, when in Rome we'll test as the Romans do. So if they use Jest at Facebook, then that's what we'll use.
+
+In the first instance see:
+
+* [Testing React Apps](https://jestjs.io/docs/en/tutorial-react)
+
+Then move onto:
+
+* [Running Tests](https://facebook.github.io/create-react-app/docs/running-tests)
+* [Test Renderer](https://reactjs.org/docs/test-renderer.html)
+* [Testing React Components: The Mostly Definitive Guide](https://www.valentinog.com/blog/testing-react/#more-1449)
+
+The first thing we did here, as per the first guide, was this:
+
+```shell
+$ yarn add --dev react-test-renderer
+```
+
+Finally, please see EmployeeList.test.js as our reference test case for API backed components which naturally will be a common occurance.
 
 ### Server Developer Hat On Mode
 
