@@ -100,7 +100,29 @@ The first thing we did here, as per the first guide, was this:
 $ yarn add --dev react-test-renderer
 ```
 
-Finally, please see EmployeeList.test.js as our reference test case for API backed components which naturally will be a common occurance.
+Please see EmployeeList.test.js as our reference test case for API backed components which naturally will be a common occurance.
+
+Also remember to check your test coverage as follows:
+
+```shell
+$ yarn test -- --coverage
+```
+
+Remember to include the following in your CI builds (or local from time to time):
+
+```shell
+$ CI=true yarn test
+$ CI=true yarn run build
+```
+
+You should also consider whether jsdom will be required when it comes to a given test case as per [Disabling jsdom](https://facebook.github.io/create-react-app/docs/running-tests#disabling-jsdom).
+
+In terms of mocking or stubbing *fetch* calls, [fetch-mock](http://www.wheresrhys.co.uk/fetch-mock/#aboutintroduction) is one option. Install as follows (note it [has node-fetch as dependency that you have to install yourself](http://www.wheresrhys.co.uk/fetch-mock/#usagerequirements)):
+
+```shell
+$ yarn add --dev node-fetch
+$ yarn add --dev fetch-mock
+```
 
 ### Server Developer Hat On Mode
 

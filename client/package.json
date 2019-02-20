@@ -37,6 +37,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "fetch-mock": "^7.3.0",
+    "node-fetch": "^2.3.0",
     "react-test-renderer": "^16.8.2"
   }
 }
