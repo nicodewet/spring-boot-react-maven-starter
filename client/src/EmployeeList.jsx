@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Employee from './Employee';
-import FetchService from './FetchService';
+import FetchService from './hal/FetchService';
 
 class EmployeeList extends Component {
   constructor(props) {
